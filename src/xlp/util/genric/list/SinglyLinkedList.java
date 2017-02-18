@@ -18,6 +18,7 @@ public class SinglyLinkedList <T> implements List<T> {
 			root = new Element<>();
 			root.setValue(t);
 			root.setPosition(UtilConstant.START_INDEX);
+			
 		}else{
 			Element<T> newElement = new Element<>();
 			newElement.setNode(root);
@@ -32,21 +33,21 @@ public class SinglyLinkedList <T> implements List<T> {
 		Element<T> record = root;
 		Element<T> last = null;
 		while (record != null) {
+			
 			if(record.getPosition().equals(position)){
+				
 				if(last == null){
 					root = (Element<T>) record.getNode();
-
-					System.out.println("last null " + position);
 					record = null;
-				}else if(position.equals(UtilConstant.START_INDEX)){
-					System.out.println("position  0 " + position);
 					
+				}else if(position.equals(UtilConstant.START_INDEX)){					
 					last.setNode(null);
 					record = null;
+					
 				}else{
-					System.out.println("position  " + position);
 					last.setNode(record.getNode());
 					record = null;
+					
 				}
 				--size;
 			}else{
@@ -62,8 +63,10 @@ public class SinglyLinkedList <T> implements List<T> {
 			if(record.getPosition().equals(position)){
 				record.setValue(value);
 				record = null;
+				
 			}else{
 				record = (Element<T>) record.getNode();
+				
 			}
 			
 		}
@@ -74,6 +77,7 @@ public class SinglyLinkedList <T> implements List<T> {
 		while (record != null) {
 			System.out.println(record.getPosition() + "  " + record.getValue());
 			record = (Element<T>) record.getNode();
+			
 		}
 	}
 	
