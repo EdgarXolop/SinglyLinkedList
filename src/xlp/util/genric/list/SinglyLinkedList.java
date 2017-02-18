@@ -56,6 +56,18 @@ public class SinglyLinkedList <T> implements List<T> {
 			
 		}
 	}
+	public void update(Integer position,T value){
+		Element<T> record = root;
+		while (record != null) {
+			if(record.getPosition().equals(position)){
+				record.setValue(value);
+				record = null;
+			}else{
+				record = (Element<T>) record.getNode();
+			}
+			
+		}
+	}
 	
 	public void printList(){
 		Element<T> record = root;
