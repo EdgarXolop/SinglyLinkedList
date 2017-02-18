@@ -29,6 +29,8 @@ public class SinglyLinkedList <T> implements List<T> {
 		}
 		++size;
 	}
+	
+	@Override
 	public void remove(Integer position){
 		Element<T> record = root;
 		Element<T> last = null;
@@ -57,6 +59,8 @@ public class SinglyLinkedList <T> implements List<T> {
 			
 		}
 	}
+	
+	@Override
 	public void update(Integer position,T value){
 		Element<T> record = root;
 		while (record != null) {
