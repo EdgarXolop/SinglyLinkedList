@@ -7,6 +7,8 @@ public class Element <T> implements Node<T> {
 	private T value;
 	private Node<T> node;
 	
+	public Element (){}
+	
 	@Override
 	public Integer getPosition() {
 		return position;
